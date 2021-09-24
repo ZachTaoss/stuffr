@@ -1,0 +1,31 @@
+@use '../themes/defaultThemes' as *;
+@use '../util/variables' as *;
+@use '../util/mixins' as *;
+
+.btn{
+    display: inline-block;
+    background-color: $primary-4;
+    color: $white;
+    padding: 0.25rem , 0.75rem;
+    border-radius: $radius;
+    border-color: transparent;
+    text-transform: capitalize;
+    font-size: large;
+    letter-spacing: $spacing;
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: $transition;
+    &hover{
+        background-color: $primary-6;
+        color: $primary-4
+    }
+    &.red{
+        background-color: $red-light;
+        color: $black;
+        &:hover{
+            background-color: $red-dark;
+            color: white;
+        }
+    }
+}
