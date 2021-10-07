@@ -4,14 +4,14 @@
   "description": "",
   "main": "01-intro.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.13"
   },
-  "scripts":{
-    "start":"nodemon"
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
