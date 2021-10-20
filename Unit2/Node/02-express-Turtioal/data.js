@@ -32,7 +32,7 @@ const products = [
       desc: `I'm baby direct trade farm-to-table hell of, YOLO readymade raw denim venmo whatever organic gluten-free kitsch schlitz irony af flexitarian.`,
     },
   ]
-  const people = [
+  let people = [
     { id: 1, name: 'Ayden' },
     { id: 2, name: 'Alora' },
     { id: 3, name: 'Brandi' },
