@@ -29,7 +29,7 @@ const showTasks = async () => {
             <div class="task-links>
 
 
-            <a href="task.html?id=${taskID}" class="edit-link">
+            <a href="task.html"?id=${taskID} class="edit-link">
             <i class = "fas fa-edit" />
             </a>
 

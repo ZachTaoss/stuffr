@@ -8,10 +8,14 @@ delte `/` clearTaks => removes all tasks
 get `/:id` getTask => returns 1 task
 */
 
-const getTasks = (req,res)=> {
-    res.json({method:req.method,task:"getTasks"})
+const Task = require("../models/Task")
+
+const getTasks =async (req,res)=> {
+    const tasks = await Task.find({})
+    res.json({method:req.method,tasks:tasks})
 }
-const createTask= (req,res)=> {
+const createTask = async (req,res)=> {
+    const tasks = await Task.create(req.body);
     res.json({method:req.method,task:"createTasks",body:req.body})
 }
 const removeTask = (req,res)=> {
