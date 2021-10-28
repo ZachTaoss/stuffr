@@ -27,8 +27,6 @@ const showTasks = async () => {
         completed && `tasks-completed`
       }> <h5><span><i class = "far fa-check-circle"></i></span>${name}</h5>
             <div class="task-links>
-
-
             <a href="task.html"?id=${taskID} class="edit-link">
             <i class = "fas fa-edit" />
             </a>

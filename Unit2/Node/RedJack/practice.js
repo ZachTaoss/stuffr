@@ -1,0 +1,1 @@
+const re = /(Mr|Mrs|Dr|Er|Ms)\. [A-Z][a-z]*/g
