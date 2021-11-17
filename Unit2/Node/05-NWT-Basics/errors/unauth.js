@@ -7,3 +7,5 @@ class UnauthError extends CustomAPIError {
         this.StatusCodes = StatusCodes
     }
 }
+
+module.exports = UnauthError

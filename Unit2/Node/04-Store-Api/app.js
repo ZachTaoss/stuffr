@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 require(`express-async-errors`)
 require("dotenv").config();
+require("./db/connect");
 const connectDB = require("./db/connect");
 const notFound = require("./middleware/notfound");
 const errorHandlerMiddleware = require("./middleware/error-handler");
@@ -37,4 +38,3 @@ const startApp = async () => {
 
 startApp()
 
-require("./db/connect");
