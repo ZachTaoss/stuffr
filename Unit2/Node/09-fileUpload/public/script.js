@@ -51,7 +51,7 @@ async function fetchProducts() {
       data: { products },
     } = await axios.get(url);
     const tempProducts = products.map((each) => {
-      return `<article class="product"> <img src="${each.image}" alt="${each.name}" class="img"> <footer><p>${each.name}</p><spam>${each.price}</span></footer></article>`;
+      return `<article class="product"> <img src="${each.image}" alt="${each.name}" class="img"> <footer><p>${each.name}</p><spam>${each.price}</spam></footer></article>`;
     });
     container.innerHTML = tempProducts;
   } catch (error) {
