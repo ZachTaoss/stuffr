@@ -1,5 +1,8 @@
 const app = require(`express`)();
-const next = require("next");
+const express = require(`express`)
+const next = require('next');
+const {connectDB} = require("./DB/connect")
+require("dotenv").config()
 
 //! creates a check for dev vs production 
 const dev = process.env.NODE_ENV !== "production";
@@ -13,3 +16,13 @@ const nextApp = next({dev})
 
 const handler = nextApp.getRequestHandler();
 
+app.use(express.json())
+connectDB()
+
+nextApp.prepare().then(() => {
+    app.all(`*`, (req,res)=> handler(req,res))
+    app.listen(PORT, (err) => {
+        if (err) console.log(err)
+        else console.log(`sever listening @ ${PORT}`)
+    })
+})
